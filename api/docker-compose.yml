@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres:11.3
+    container_name: spacex-db
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=spacex
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: spacex-pgadmin
+    ports:
+      - '8081:8081'
+    links:
+      - db
+    depends_on:
+      - db
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=postgres@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=password
+      - PGADMIN_LISTEN_PORT=8081
