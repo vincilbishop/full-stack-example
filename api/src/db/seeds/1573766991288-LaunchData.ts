@@ -35,7 +35,7 @@ export class LaunchData1573766991288 implements MigrationInterface {
           return false;
         }
       });
-      
+
       launches.push(launch);
     }
 
