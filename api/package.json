@@ -18,17 +18,33 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "compose": "docker-compose -f ./docker-compose.yml"
+    "compose": "docker-compose -f ./docker-compose.yml",
+    "db:drop": "yarn typeorm schema:drop",
+    "db:migrate": "yarn typeorm migration:run",
+    "db:migrate:revert": "yarn typeorm migration:revert",
+    "db:migrate:generate": "yarn typeorm migration:generate -n",
+    "db:migrate:create": "yarn typeorm migration:create -n",
+    "db:reset": "yarn build && yarn db:drop && yarn db:migrate && yarn db:seed",
+    "db:seed:create": "yarn typeorm migration:create -c seed -n",
+    "db:seed": "yarn typeorm migration:run -c seed",
+    "db:seed:revert": "yarn typeorm migration:revert -c seed",
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
     "@nestjs/common": "^6.0.0",
     "@nestjs/core": "^6.0.0",
     "@nestjs/platform-express": "^6.0.0",
+    "@nestjs/swagger": "^3.1.0",
+    "@nestjs/typeorm": "^6.2.0",
     "@types/dotenv": "^8.2.0",
     "dotenv": "^8.2.0",
+    "lodash": "^4.17.15",
+    "pg": "^7.12.1",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
-    "rxjs": "^6.3.3"
+    "rxjs": "^6.3.3",
+    "swagger-ui-express": "^4.1.2",
+    "typeorm": "^0.2.20"
   },
   "devDependencies": {
     "@nestjs/testing": "^6.0.0",
