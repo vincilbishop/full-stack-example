@@ -11,5 +11,4 @@ import { Launch } from '../../models';
   },
 })
 @Controller('Launch')
-export class LaunchController {
-}
+export class LaunchController {}

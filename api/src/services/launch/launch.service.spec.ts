@@ -1,7 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { LaunchService } from './launch.service';
+
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Launch } from '../../models';
+import { LaunchService } from './launch.service';
 
 const mockRepository = {
   metadata: {
@@ -16,10 +17,7 @@ describe('LaunchService', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [
-        LaunchService,
-        { provide: getRepositoryToken(Launch), useValue: mockRepository },
-      ],
+      providers: [LaunchService, { provide: getRepositoryToken(Launch), useValue: mockRepository }],
     }).compile();
 
     service = module.get<LaunchService>(LaunchService);
