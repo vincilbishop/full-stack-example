@@ -9,9 +9,7 @@ import { LaunchService } from '../../services/launch/launch.service';
     type: Launch,
   },
   query: {
-    sort: [
-      {field: 'launchDate', order: 'ASC'},
-    ],
+    sort: [{ field: 'launchDate', order: 'ASC' }],
   },
   routes: {
     only: ['getManyBase'],
