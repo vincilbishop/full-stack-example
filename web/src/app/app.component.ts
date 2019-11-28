@@ -1,8 +1,8 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {Observable, timer} from 'rxjs';
-import {debounce} from 'rxjs/operators';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Observable, timer } from 'rxjs';
+import { debounce } from 'rxjs/operators';
 import * as _ from 'lodash';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 interface Launch {
   createdAt: object;
@@ -43,6 +43,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    // Let's observe and debounce changes to the query form to results update when the user changes their selection
     this.formElement.form.valueChanges.pipe(debounce(() => timer(300))).subscribe(change => {
       this.queryLaunches(change);
     });
@@ -52,9 +53,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     let httpParams = null;
 
     if (query) {
+      // Let's build the query string based on the user's selection.
       _.forOwn(query, (value, key) => {
         if (value) {
-          console.log(key, value);
           if (!httpParams) {
             httpParams = [];
           }
@@ -67,10 +68,10 @@ export class AppComponent implements OnInit, AfterViewInit {
     let url = 'launch';
 
     if (httpParams) {
+      // HACK: Normally would have preferred to use HttpParams,
+      // but the @nest/crud API Tool brings an incompatibility when it comes to multiple filters
       url = `${url}?${httpParams.join('&')}`;
     }
-
-    console.log(url);
 
     this.launches$ = this.httpClient.get<Launch[]>(url);
   }

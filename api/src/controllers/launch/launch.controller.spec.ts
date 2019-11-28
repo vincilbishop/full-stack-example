@@ -12,7 +12,7 @@ describe('Launch Controller', () => {
         {
           provide: 'LaunchService',
           useValue: jest.fn(),
-        }
+        },
       ],
     }).compile();
 
