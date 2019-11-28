@@ -24,24 +24,39 @@
             </div>
 
             <div fxLayout="column" fxFlex="fill" fxFlexAlign="center">
-            <div fxLayout="row" fxFlexAlign="end" fxLayoutGap="20px">
+              <div fxLayout="row" fxFlexAlign="end" fxLayoutGap="20px">
 
-              <div fxFlex="auto">
-                <input name="landed" [(ngModel)]="filter.landed" type="checkbox"/>
-                LAND
+                <div fxFlex="auto">
+                  <div class="pretty p-svg">
+                    <input name="landed" [(ngModel)]="filter.landed" type="checkbox"/>
+                    <div class="state">
+                      <img class="svg" src="../assets/checkmark.svg">
+                      <label>LANDED</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div fxFlex="auto">
+                  <div class="pretty p-svg">
+                    <input name="reused" [(ngModel)]="filter.reused" type="checkbox"/>
+                    <div class="state">
+                      <img class="svg" src="../assets/checkmark.svg">
+                      <label>REUSED</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div fxFlex="auto">
+                  <div class="pretty p-svg">
+                    <input name="reddit" [(ngModel)]="filter.reddit" type="checkbox"/>
+                    <div class="state">
+                      <img class="svg" src="../assets/checkmark.svg">
+                      <label>WITH REDDIT</label>
+                    </div>
+                  </div>
+                </div>
+
               </div>
-
-              <div fxFlex="auto">
-                <input name="reused" [(ngModel)]="filter.reused" type="checkbox"/>
-                REUSED
-              </div>
-
-              <div fxFlex="auto">
-                <input name="reddit" [(ngModel)]="filter.reddit" type="checkbox"/>
-                WITH REDDIT
-              </div>
-
-            </div>
             </div>
 
           </div>
