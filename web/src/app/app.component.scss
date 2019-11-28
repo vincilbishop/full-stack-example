@@ -10,6 +10,9 @@
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 8px;
   padding: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.66);
 }
 
 .app-link-img {
@@ -20,6 +23,7 @@
 .app-main-header-title {
   color: #FFFFFF;
   font-size: 64px;
+  padding: 40px;
 }
 
 .app-outer-launch-container {
@@ -41,10 +45,16 @@
 }
 
 .app-table-toolbar {
+  max-height: 77px;
   color: #FFFFFF;
+  font-size: 14px;
   background-color: rgba(255, 255, 255, 0.07);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.66);
+  padding-right: 10px;
 }
 
 .app-table-header {

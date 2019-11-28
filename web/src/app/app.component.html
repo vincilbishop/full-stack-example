@@ -14,14 +14,17 @@
           <div class="app-table-toolbar"
                fxLayout="row"
                fxFlex="fill">
-            <div fxLayout="row" fxFlex="fill" fxFlexAlign="start">
+            <div fxLayout="row"
+                 fxFlex="fill"
+                 fxFlexAlign="start">
               <button class="app-refresh-button"
                       fxFlexAlign="start"
                       (click)="refreshQuery()">
               </button>
             </div>
 
-            <div fxLayout="row" fxFlexAlign="end" fxFlex="fill">
+            <div fxLayout="column" fxFlex="fill" fxFlexAlign="center">
+            <div fxLayout="row" fxFlexAlign="end" fxLayoutGap="20px">
 
               <div fxFlex="auto">
                 <input name="landed" [(ngModel)]="filter.landed" type="checkbox"/>
@@ -38,6 +41,7 @@
                 WITH REDDIT
               </div>
 
+            </div>
             </div>
 
           </div>
