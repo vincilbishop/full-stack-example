@@ -3,8 +3,10 @@
   height:40px;
 }
 
-.app-launch-row {
+.app-table-row {
   min-height: 74px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
 }
 
 .app-link-img {
@@ -12,8 +14,36 @@
   height:21px;
 }
 
+.app-main-header-title {
+  color: #FFFFFF;
+  font-size: 64px;
+}
+
 .app-outer-launch-container {
   width: 956px;
+}
+
+.app-page-container {
+  background: url(../assets/background.jpg) fixed;
+}
+
+.app-refresh-button {
+  width:72px;
+  height:73px;
+  background: url(../assets/refresh-button.png);
+  border: 0;
+  background-size: 100%; /* To fill the dimensions of container (button), or */
+  background-size: 72px auto; /* to specify dimensions explicitly */
+}
+
+.app-table-toolbar {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.app-table-header {
+  height: 49px;
+  background-color: rgba(255, 255, 255, 1.0);
 }
 
 
