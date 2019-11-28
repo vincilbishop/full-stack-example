@@ -1,5 +1,6 @@
-<div class="app-page-container">
-  <form #formElement="ngForm">
+<form #formElement="ngForm">
+  <div fxFill class="app-page-container">
+
     <div fxLayoutAlign="center center">
       <div fxLayout="column"
            fxLayoutAlign="center center">
@@ -42,28 +43,34 @@
           </div>
           <div class="app-table-header"
                fxLayout="row"
+               fxLayoutGap="15px"
+               fxLayoutAlign="start"
                fxFlex="fill">
 
-            <div fxFlex="5">Badge</div>
-            <div fxFlex="10">Rocket Name</div>
-            <div fxFlex="10">Rocket Type</div>
+            <div fxFlex="6">Badge</div>
+            <div fxFlex="10">Rocket</div>
+            <div fxFlex="12">Rocket Type</div>
             <div fxFlex="10">Launch Date</div>
-            <div fxFlex="55">Details</div>
+            <div fxFlex="50">Details</div>
             <div fxFlex="5">ID</div>
             <div fxFlex="5">Article</div>
           </div>
-          <div fxLayout="column" fxLayoutGap="10px">
-            <div class="app-table-row"
-                 *ngFor="let launch of (launches$ | async)"
-                 fxLayout="row">
+          <div fxLayout="column"
+               fxLayoutGap="10px">
 
-              <div fxFlex="5">
+            <div class="app-table-row"
+                 fxLayout="row"
+                 fxLayoutGap="15px"
+                 fxLayoutAlign="start"
+                 *ngFor="let launch of (launches$ | async)">
+
+              <div fxFlex="6">
                 <img class="app-badge-img" src="{{launch.badgeUrl}}">
               </div>
               <div fxFlex="10">{{launch.rocketName}}</div>
-              <div fxFlex="10">{{launch.rocketType}}</div>
+              <div fxFlex="12">{{launch.rocketType}}</div>
               <div fxFlex="10">{{launch.launchDate |  date:'M/d/y'}}</div>
-              <div fxFlex="55">{{launch.launchDetails}}</div>
+              <div fxFlex="50">{{launch.launchDetails}}</div>
               <div fxFlex="5">{{launch.id}}</div>
               <div fxFlex="5">
                 <a *ngIf="launch.articleUrl" href="{{launch.articleUrl}}" target="_blank">
@@ -79,5 +86,6 @@
 
       </div>
     </div>
-  </form>
-</div>
+
+  </div>
+</form>

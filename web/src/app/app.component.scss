@@ -4,9 +4,12 @@
 }
 
 .app-table-row {
-  min-height: 74px;
+  color: #444444;
+  font-size: 15px;
+  min-height: 65px;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 8px;
+  padding: 20px;
 }
 
 .app-link-img {
@@ -25,6 +28,7 @@
 
 .app-page-container {
   background: url(../assets/background.jpg) fixed;
+  padding: 20px;
 }
 
 .app-refresh-button {
@@ -39,11 +43,17 @@
 .app-table-toolbar {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.07);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .app-table-header {
-  height: 49px;
+  font-size: 17px;
+  min-height: 49px;
+  color: #043D67;
   background-color: rgba(255, 255, 255, 1.0);
+  margin-bottom: 10px;
+  padding: 20px;
 }
 
 

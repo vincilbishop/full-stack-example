@@ -8,6 +8,11 @@ import { LaunchService } from '../../services/launch/launch.service';
   model: {
     type: Launch,
   },
+  query: {
+    sort: [
+      {field: 'launchDate', order: 'ASC'},
+    ],
+  },
   routes: {
     only: ['getManyBase'],
   },
