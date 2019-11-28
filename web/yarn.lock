@@ -1054,6 +1054,18 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
+"@nestjsx/crud-request@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@nestjsx/crud-request/-/crud-request-4.2.0.tgz#82d81d406157e83e7fa9816ce1f24d03824c24a6"
+  integrity sha512-Zw3yFgy0ycU7k3rAOmUNVKW54JGdZySxNd7Y3/Om+mJ6RybTnapht0e0qDe+fG9m2vyx8wYiheA0L7FNwn4VEQ==
+  dependencies:
+    "@nestjsx/util" "^4.2.0"
+
+"@nestjsx/util@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@nestjsx/util/-/util-4.2.0.tgz#28a9eab85e01390dcc0d8fd32074256b08ff6c1d"
+  integrity sha512-dGu4UlHibcv4nWfYpIdbY4CEHe87mua3QTu43FFE/F76BIwQc0Bq9ohnUnR0Cgp4MjutNGXff9L9DakQaE7eWQ==
+
 "@ngtools/webpack@8.3.19":
   version "8.3.19"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.3.19.tgz#9ed3123a9c3d79c49f73fd9a30cbe283ddde9d47"

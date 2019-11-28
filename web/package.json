@@ -15,7 +15,8 @@
     "format:ci": "yarn format -c",
     "format-lint": "yarn format --write && yarn lint --fix",
     "g:api": "rm -Rf src/app/shared/api && openapi-generator generate -i http://localhost:3000/api/v1/docs-json --skip-validate-spec -g typescript-angular -o src/app/shared/api -c ./openapi-generator-config.yaml; yarn format-lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "openapi-generator": "openapi-generator"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +30,7 @@
     "@angular/platform-browser": "~8.2.3",
     "@angular/platform-browser-dynamic": "~8.2.3",
     "@angular/router": "~8.2.3",
+    "@nestjsx/crud-request": "^4.2.0",
     "@types/jasmine": "^3.5.0",
     "@types/jasminewd2": "^2.0.8",
     "ngx-take-until-destroy": "^5.4.0",
