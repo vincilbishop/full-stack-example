@@ -8,6 +8,12 @@ describe('Launch Controller', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [LaunchController],
+      providers: [
+        {
+          provide: 'LaunchService',
+          useValue: jest.fn(),
+        }
+      ],
     }).compile();
 
     controller = module.get<LaunchController>(LaunchController);
