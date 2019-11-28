@@ -8,8 +8,13 @@
       <div class="container app-outer-launch-container"
            fxLayout="column">
 
-        <div fxLayout="row" fxFlexAlign="end">
-          <div fxLayout="row" fxFlex="fill">
+
+        <div fxLayout="row" fxFlex="fill" >
+          <div fxLayout="row" fxFlex="fill" fxFlexAlign="start">
+            <button fxFlexAlign="start" (click)="refreshQuery()">Refresh</button>
+          </div>
+
+          <div fxLayout="row" fxFlexAlign="end" fxFlex="fill">
 
             <div fxFlex="auto">
               <input name="landed" [(ngModel)]="filter.landed" type="checkbox"/>

@@ -39,31 +39,29 @@ export class AppComponent implements OnInit, AfterViewInit {
   constructor(private readonly httpClient: HttpClient) {}
 
   ngOnInit(): void {
-    this.queryLaunches();
+    this.refreshQuery();
   }
 
   ngAfterViewInit() {
     // Let's observe and debounce changes to the query form to results update when the user changes their selection
     this.formElement.form.valueChanges.pipe(debounce(() => timer(300))).subscribe(change => {
-      this.queryLaunches(change);
+      this.refreshQuery();
     });
   }
 
-  queryLaunches(query: any = null) {
+  refreshQuery() {
     let httpParams = null;
 
-    if (query) {
-      // Let's build the query string based on the user's selection.
-      _.forOwn(query, (value, key) => {
-        if (value) {
-          if (!httpParams) {
-            httpParams = [];
-          }
-
-          httpParams.push(`filter=${key}||eq||${value}`);
+    // Let's build the query string based on the user's selection.
+    _.forOwn(this.filter, (value, key) => {
+      if (value) {
+        if (!httpParams) {
+          httpParams = [];
         }
-      });
-    }
+
+        httpParams.push(`filter=${key}||eq||${value}`);
+      }
+    });
 
     let url = 'launch';
 
