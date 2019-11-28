@@ -12,6 +12,10 @@ export class Launch extends ModelBase {
   badgeUrl: string;
 
   @ApiModelProperty()
+  @Column({default: false, nullable: true})
+  landed: boolean;
+
+  @ApiModelProperty()
   @Column()
   launchDate: Date;
 

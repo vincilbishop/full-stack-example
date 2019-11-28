@@ -23,6 +23,7 @@ export class LaunchData1573766991288 implements MigrationInterface {
 
       launch.rocketName = rawLaunch.rocket.rocket_name;
       launch.rocketType = rawLaunch.rocket.rocket_type;
+      launch.landed = rawLaunch.rocket.first_stage.cores[0].land_success;
       launch.launchDate = rawLaunch.launch_date_utc;
       launch.launchDetails = rawLaunch.details;
       launch.launchNumber = rawLaunch.flight_number;

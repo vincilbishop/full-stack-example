@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {Launch, LaunchApiService} from './shared/api';
-import {Observable} from 'rxjs';
+import {Observable, timer} from 'rxjs';
+import {debounce} from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import {Observable} from 'rxjs';
 })
 export class AppComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('f', {static: false}) f;
+  @ViewChild('formElement', {static: false}) formElement;
 
 
   launches$: Observable<Launch[]>;
@@ -27,12 +28,19 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.f.form.valueChanges.subscribe((change) => {
+    this.formElement.form.valueChanges.pipe(
+      debounce(() => timer(300))
+    ).subscribe((change) => {
       console.log(change);
     });
   }
 
-  queryLaunches() {
-    this.launches$ = this.launchService.launchGet();
+  queryLaunches(query: any = null) {
+
+    if (query) {
+
+    }
+
+    this.launches$ = this.launchService.launchGet(null,'');
   }
 }
