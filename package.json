@@ -1,0 +1,12 @@
+{
+  "name": "full-stack-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:vincilbishop/full-stack-example.git",
+  "author": "Vincil Bishop <vincil.bishop@vbishop.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "deploy": "git push https://git:${GIT_ASKPASS}@git.heroku.com/frozen-fortress-85895.git `git subtree split --prefix api`:master --force"
+  }
+}
