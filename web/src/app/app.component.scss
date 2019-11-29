@@ -1,6 +1,6 @@
 .app-badge-img {
-  width:33px;
-  height:40px;
+  width: 33px;
+  height: 40px;
 }
 
 .app-table-row {
@@ -16,8 +16,8 @@
 }
 
 .app-link-img {
-  width:21px;
-  height:21px;
+  width: 21px;
+  height: 21px;
 }
 
 .app-main-header-title {
@@ -36,8 +36,8 @@
 }
 
 .app-refresh-button {
-  width:72px;
-  height:73px;
+  width: 72px;
+  height: 73px;
   background: url(../assets/refresh-button.png);
   border: 0;
   background-size: 100%; /* To fill the dimensions of container (button), or */
@@ -59,9 +59,10 @@
 
 .app-table-header {
   font-size: 17px;
-  min-height: 49px;
+  max-height: 49px;
   color: #043D67;
   background-color: rgba(255, 255, 255, 1.0);
+  background-image: linear-gradient(#9DB7CD, #FFFFFF);
   margin-bottom: 10px;
   padding: 20px;
 }
