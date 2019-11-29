@@ -6,9 +6,18 @@ import { ConfigService } from './config/config.service';
 import { LaunchController } from './controllers/launch/launch.controller';
 import { Launch } from './models';
 import { LaunchService } from './services/launch/launch.service';
+import { join } from 'path';
+import { ServeStaticModule } from '@nestjs/serve-static';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(), TypeOrmModule.forFeature([Launch])],
+  imports: [
+    TypeOrmModule.forRoot(),
+    TypeOrmModule.forFeature([Launch]),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', '..', 'web', 'dist'),
+      renderPath: 'app',
+    }),
+  ],
   controllers: [AppController, LaunchController],
   providers: [
     AppService,
@@ -19,4 +28,5 @@ import { LaunchService } from './services/launch/launch.service';
     LaunchService,
   ],
 })
-export class AppModule {}
+export class AppModule {
+}

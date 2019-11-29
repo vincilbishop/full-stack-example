@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:dev": "yarn start",
+    "start": "ng serve --port 4200",
     "build": "ng build",
+    "build:prod": "yarn build --prod",
     "test": "ng test --watch",
     "test:once": "ng test",
     "test:ci": "ng test --ci --reporters=jest-junit --coverage",

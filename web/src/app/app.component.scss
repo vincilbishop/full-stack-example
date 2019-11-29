@@ -23,7 +23,8 @@
 .app-main-header-title {
   color: #FFFFFF;
   font-size: 64px;
-  padding: 40px;
+  padding-top: 0px;
+  padding-bottom: 30px;
 }
 
 .app-outer-launch-container {
@@ -32,6 +33,7 @@
 
 .app-page-container {
   background: url(../assets/background.jpg) fixed;
+  background-size: 100% calc(100%);
   padding: 20px;
 }
 
