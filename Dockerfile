@@ -17,4 +17,4 @@ RUN yarn install
 EXPOSE 3000
 RUN yarn build:prod
 
-CMD yarn db:migrate && yarn db:seed && yarn start:prod
+CMD yarn --cwd /usr/src/app/api run db:migrate && yarn --cwd /usr/src/app/api run db:seed && yarn --cwd /usr/src/app/api run  start:prod
