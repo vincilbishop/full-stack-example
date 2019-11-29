@@ -1,8 +1,8 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { Observable, timer } from 'rxjs';
-import { debounce } from 'rxjs/operators';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {Observable, timer} from 'rxjs';
+import {debounce} from 'rxjs/operators';
 import * as _ from 'lodash';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 
 interface Launch {
   createdAt: object;
