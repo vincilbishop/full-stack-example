@@ -2,3 +2,5 @@
 build:
   docker:
     web: Dockerfile
+run:
+  web: yarn --cwd /usr/src/app/api run db:migrate && yarn --cwd /usr/src/app/api run db:seed && yarn --cwd /usr/src/app/api run start:prod

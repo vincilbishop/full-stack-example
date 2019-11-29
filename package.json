@@ -7,6 +7,5 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "deploy": "git push https://git:${GIT_ASKPASS}@git.heroku.com/frozen-fortress-85895.git `git subtree split --prefix api`:master --force"
   }
 }
