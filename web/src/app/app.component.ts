@@ -1,8 +1,9 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {Observable, timer} from 'rxjs';
-import {debounce} from 'rxjs/operators';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Observable, timer } from 'rxjs';
+import { debounce } from 'rxjs/operators';
 import * as _ from 'lodash';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 interface Launch {
   createdAt: object;
@@ -25,6 +26,19 @@ interface Launch {
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations: [
+    // the fade-in/fade-out animation.
+    trigger('fadeIn', [
+      // the "in" style determines the "resting" state of the element when it is visible.
+      state('in', style({ opacity: 1 })),
+
+      // fade in when created. this could also be written as transition('void => *')
+      transition(':enter', [style({ opacity: 0 }), animate(250)]),
+
+      // fade out when destroyed. this could also be written as transition('void => *')
+      transition(':leave', animate(250, style({ opacity: 0 }))),
+    ]),
+  ],
 })
 export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('formElement', { static: false }) formElement;

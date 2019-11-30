@@ -1,13 +1,13 @@
 import { Module } from '@nestjs/common';
+import { ServeStaticModule } from '@nestjs/serve-static';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigService } from './config/config.service';
 import { LaunchController } from './controllers/launch/launch.controller';
 import { Launch } from './models';
 import { LaunchService } from './services/launch/launch.service';
-import { join } from 'path';
-import { ServeStaticModule } from '@nestjs/serve-static';
 
 @Module({
   imports: [
@@ -28,5 +28,4 @@ import { ServeStaticModule } from '@nestjs/serve-static';
     LaunchService,
   ],
 })
-export class AppModule {
-}
+export class AppModule {}

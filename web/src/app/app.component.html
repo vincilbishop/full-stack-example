@@ -81,6 +81,7 @@
                  fxLayout="row"
                  fxLayoutGap="15px"
                  fxLayoutAlign="start"
+                 [@fadeIn]="'in'"
                  *ngFor="let launch of (launches$ | async)">
 
               <div fxFlex="6">

@@ -8,12 +8,13 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('web app is running!');
+  it('should display welcome message', async (done) => {
+    await page.navigateTo();
+    expect(page.getTitleText()).toEqual('SpaceX Launches');
+    done();
   });
 
-  it('should refresh data', () => {
+  xit('should refresh data', () => {
 
     /*
     Data Refresh
@@ -23,7 +24,7 @@ describe('workspace-project App', () => {
 
   });
 
-  it('should filter "Land Success"', () => {
+  xit('should filter "Land Success"', () => {
 
     /*
     “Land Success” if that property is truthy on the data object
@@ -31,7 +32,7 @@ describe('workspace-project App', () => {
 
   });
 
-  it('should filter "Reused"', () => {
+  xit('should filter "Reused"', () => {
 
     /*
     “Reused” if the data object indicates any reused elements
@@ -39,7 +40,7 @@ describe('workspace-project App', () => {
 
   });
 
-  it('should filter "With Reddit"', () => {
+  xit('should filter "With Reddit"', () => {
 
     /*
     “With Reddit” if the data object contains any non-null property of the
@@ -48,7 +49,7 @@ describe('workspace-project App', () => {
 
   });
 
-  it('should display Link Outs', () => {
+  xit('should display Link Outs', () => {
 
     /*
     If the data object contains a URL to an external article, clicking the LINK icon on
