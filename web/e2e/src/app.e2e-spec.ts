@@ -14,6 +14,8 @@ describe('workspace-project App', () => {
     done();
   });
 
+  // TODO: Finish e2e tests
+
   xit('should refresh data', () => {
 
     /*
