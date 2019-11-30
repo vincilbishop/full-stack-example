@@ -4,23 +4,7 @@ import { debounce } from 'rxjs/operators';
 import * as _ from 'lodash';
 import { HttpClient } from '@angular/common/http';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-
-interface Launch {
-  createdAt: object;
-  id: number;
-  tag: string;
-  updatedAt: object;
-  articleUrl: string;
-  badgeUrl: string;
-  landed: boolean;
-  launchDate: object;
-  launchDetails: string;
-  launchNumber: number;
-  reddit: boolean;
-  reused: boolean;
-  rocketName: string;
-  rocketType: string;
-}
+import { Launch } from './models/launch';
 
 @Component({
   selector: 'app-root',
