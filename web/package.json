@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start:dev": "yarn start",
+    "start:dev": "yarn install && yarn start",
     "start": "ng serve --port 4200",
     "build": "ng build",
     "build:prod": "yarn build --prod",
@@ -17,7 +17,7 @@
     "format:ci": "yarn format -c",
     "format-lint": "yarn format --write && yarn lint --fix",
     "g:api": "rm -Rf src/app/shared/api && openapi-generator generate -i http://localhost:3000/api/v1/docs-json --skip-validate-spec -g typescript-angular -o src/app/shared/api -c ./openapi-generator-config.yaml; yarn format-lint",
-    "e2e": "ng e2e",
+    "test:e2e": "ng e2e",
     "openapi-generator": "openapi-generator"
   },
   "private": true,
