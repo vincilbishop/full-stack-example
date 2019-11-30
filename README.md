@@ -16,6 +16,7 @@ The following items are required to be installed globally in order to run the ap
 ### Local Application
 To run the application locally:
 * Clone this repository.
+* From the `api/` directory run `yarn install` to install dependencies.
 * From the `api/` directory run `yarn compose up` to start the database.
 * From the `api/` directory run `yarn db:reset` to populate the database.
 * From the `api/` directory run `yarn start:dev` to start the application server.
