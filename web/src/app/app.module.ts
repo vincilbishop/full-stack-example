@@ -8,10 +8,19 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BaseUrlInterceptor } from './shared/base-url-interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [AppRoutingModule, BrowserModule, BrowserAnimationsModule, FlexLayoutModule, FormsModule, HttpClientModule],
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    FormsModule,
+    HttpClientModule,
+    LazyLoadImageModule,
+  ],
   providers: [
     { provide: 'API_BASE_PATH', useValue: environment.API_BASE_PATH },
     {

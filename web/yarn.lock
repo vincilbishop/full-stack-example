@@ -5786,6 +5786,20 @@ neo-async@^2.5.0, neo-async@^2.6.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
+ng-lazyload-image@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/ng-lazyload-image/-/ng-lazyload-image-7.0.1.tgz#c50f7eb581388673189d826bf504c352a73cb19f"
+  integrity sha512-0aTsuqeoos8gNlr9q7LJtWdODOuE3w/CDQHNK7lERU34TXJyM3ud77ccbArg+vaCHfzSaMkh87h/wZK4ZJ9dxw==
+  dependencies:
+    tslib "^1.9.0"
+
+ngx-image-blur@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/ngx-image-blur/-/ngx-image-blur-0.0.2.tgz#c54f62b5c28fd885d11740a542133c59c44aebe2"
+  integrity sha512-Qgyel/pfYJxrlsusBn+iHpSzD6QdZtUpOIUCitLQBfa8/ZT7D+AObegfI0wJLo780nx7YdSwkBkTk99OD52m3g==
+  dependencies:
+    tslib "^1.9.0"
+
 ngx-take-until-destroy@^5.4.0:
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/ngx-take-until-destroy/-/ngx-take-until-destroy-5.4.0.tgz#6c8606ee956584dc947e2eb609c48b8f98b09900"

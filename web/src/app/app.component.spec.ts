@@ -4,11 +4,12 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule, HttpClientTestingModule, RouterTestingModule],
+      imports: [FormsModule, HttpClientTestingModule, RouterTestingModule, LazyLoadImageModule],
       providers: [HttpClient],
       declarations: [AppComponent],
     }).compileComponents();

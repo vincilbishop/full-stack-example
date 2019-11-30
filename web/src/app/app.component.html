@@ -80,12 +80,14 @@
             <div class="app-table-row"
                  fxLayout="row"
                  fxLayoutGap="15px"
-                 fxLayoutAlign="start"
+                 fxLayoutAlign="start center"
                  [@fadeIn]="'in'"
                  *ngFor="let launch of (launches$ | async)">
 
               <div fxFlex="6">
-                <img class="app-badge-img" src="{{launch.badgeUrl}}" >
+                <img class="app-badge-img"
+                     defaultImage="assets/placeholder.png"
+                     lazyLoad="{{launch.badgeUrl}}">
               </div>
               <div fxFlex="10">{{launch.rocketName}}</div>
               <div fxFlex="12">{{launch.rocketType}}</div>
