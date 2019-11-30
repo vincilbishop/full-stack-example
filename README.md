@@ -20,7 +20,7 @@ To run the application locally:
 * From the `api/` directory run `yarn compose up` to start the database.
 * From the `api/` directory run `yarn db:reset` to populate the database.
 * From the `api/` directory run `yarn start:dev` to start the application server.
-* In a separate terminal window from the `web/` directory run `yarn start:dev` to start the web server.
+* In a separate terminal window, run `yarn start:dev` from the `web/` directory to start the web server.
 
 The following URLs should now be available:
 
