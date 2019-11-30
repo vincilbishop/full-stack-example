@@ -1,6 +1,8 @@
 # full-stack-example
 An example full stack application using Node.js and Angular
 
+![Demo Animation](https://github.com/vincilbishop/full-stack-example/raw/develop/demo.gif "Full Stack Example Screenshot")
+
 See the live demo [HERE](https://frozen-fortress-85895.herokuapp.com/).
 
 ## Development
